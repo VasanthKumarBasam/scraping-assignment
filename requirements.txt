@@ -1,0 +1,6 @@
+# Exact versions this project was developed and tested with (Python 3.10-3.12).
+requests==2.33.1
+beautifulsoup4==4.14.3
+lxml==6.0.2
+urllib3==2.6.3          # imported directly for the Retry class (also installed by requests)
+pytest==9.1.1           # only needed to run the tests

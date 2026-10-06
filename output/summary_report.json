@@ -1,0 +1,117 @@
+{
+  "run": {
+    "started_at_utc": "2026-10-06T15:49:35+00:00",
+    "finished_at_utc": "2026-10-06T16:12:23+00:00",
+    "duration_seconds": 1368.14,
+    "python_version": "3.11.17",
+    "settings": {
+      "sources": [
+        "books",
+        "quotes"
+      ],
+      "book_details_fetched": true,
+      "max_pages": null,
+      "delay_seconds": 0.5,
+      "duplicate_handling": "removed from final dataset, listed in duplicates.csv"
+    }
+  },
+  "per_source": {
+    "Books to Scrape": {
+      "status": "ok",
+      "pages_scraped": 50,
+      "pages_failed": 0,
+      "requests_failed": 0,
+      "parse_errors": 0,
+      "detail_pages_failed": 0,
+      "raw_collected": 1000,
+      "after_cleaning": 1000,
+      "rejected": 0,
+      "rejected_by_reason": {},
+      "duplicates": 1,
+      "final": 999,
+      "reconciles": true
+    },
+    "Quotes to Scrape": {
+      "status": "ok",
+      "pages_scraped": 10,
+      "pages_failed": 0,
+      "requests_failed": 0,
+      "parse_errors": 0,
+      "raw_collected": 100,
+      "after_cleaning": 100,
+      "rejected": 0,
+      "rejected_by_reason": {},
+      "duplicates": 0,
+      "final": 100,
+      "reconciles": true
+    }
+  },
+  "totals": {
+    "raw_collected": 1100,
+    "after_cleaning": 1100,
+    "rejected": 0,
+    "rejected_by_reason": {},
+    "duplicates": 1,
+    "final_record_count": 1099
+  },
+  "reconciliation": {
+    "rule": "raw_collected - rejected - duplicates = final_record_count",
+    "passed": true,
+    "note": "rejected_by_reason can add up to more than 'rejected' because one record can fail several rules"
+  },
+  "data_quality": {
+    "Books to Scrape": {
+      "records": 999,
+      "empty_values_per_column": {
+        "source": 0,
+        "source_url": 0,
+        "name_or_title": 0,
+        "category": 0,
+        "price": 0,
+        "rating": 0,
+        "author": 999,
+        "tags": 999,
+        "description": 2,
+        "scraped_at": 0
+      },
+      "price_gbp": {
+        "min": 10.0,
+        "max": 59.99,
+        "average": 35.07
+      },
+      "rating_distribution": {
+        "1": 226,
+        "2": 196,
+        "3": 203,
+        "4": 179,
+        "5": 195
+      },
+      "distinct_categories": 50
+    },
+    "Quotes to Scrape": {
+      "records": 100,
+      "empty_values_per_column": {
+        "source": 0,
+        "source_url": 0,
+        "name_or_title": 0,
+        "category": 100,
+        "price": 100,
+        "rating": 100,
+        "author": 0,
+        "tags": 3,
+        "description": 100,
+        "scraped_at": 0
+      },
+      "distinct_authors": 50,
+      "distinct_tags": 137
+    }
+  },
+  "source_errors": {},
+  "output_files": {
+    "final_dataset": "/Users/basamvasanthkumar/Desktop/Projects/scraping_assignment/output/final_dataset.csv",
+    "summary_report": "/Users/basamvasanthkumar/Desktop/Projects/scraping_assignment/output/summary_report.json",
+    "rejected_records": "/Users/basamvasanthkumar/Desktop/Projects/scraping_assignment/output/rejected_records.csv",
+    "duplicates": "/Users/basamvasanthkumar/Desktop/Projects/scraping_assignment/output/duplicates.csv",
+    "log": "/Users/basamvasanthkumar/Desktop/Projects/scraping_assignment/logs/scraper.log"
+  }
+}
